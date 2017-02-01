@@ -1,0 +1,102 @@
+import java.util.*;
+import java.io.*;
+class javaString{
+   public static void main(String args[])throws Exception{
+     Scanner sc=new Scanner(System.in);
+    InputStreamReader isr=new InputStreamReader(System.in);
+    BufferedReader br=new BufferedReader(isr);
+    while(true){
+     System.out.println("1.To convert into Lower Case");
+     System.out.println("2.To convert into Capital Case");
+     System.out.println("3.To replace some character with some other");
+     System.out.println("4.To trim the extra spaces");
+     System.out.println("5.To get index of any character");
+     System.out.println("6.To compare two strings");
+     System.out.println("7.To get the length of string");
+     System.out.println("8.To get any substring");
+      int choice=sc.nextInt();
+     switch(choice){
+                  case 1:
+                       {
+                          System.out.println(" Enter the String");
+                           String s= sc.next();
+                          System.out.println(s.toLowerCase());
+                         break;
+                       }
+                    case 2:
+                       {
+                          System.out.println(" Enter the String");
+                           String s= sc.next();
+                          System.out.println(s.toUpperCase());
+                          break;
+                       }
+                    case 3:
+                       {
+                          System.out.println(" Enter the String");
+                           String s= sc.next();
+                           System.out.print("Enter the charater you want to replace ");
+                           String s1=sc.next();
+                           char c1=s1.charAt(0);
+                          System.out.print("Enter the charater by which you want to replace ");
+                           String s2=sc.next();
+                           char c2=s2.charAt(0);
+
+                         System.out.println(s.replace(c1,c2));
+                          break;
+                       }
+                    case 4:
+                       {
+                          System.out.println(" Enter the String");
+                           String s= br.readLine();
+                          System.out.println(s.trim());
+                         break;
+                       }
+                   case 5:
+                       {
+                           System.out.println(" Enter the String");
+                           String s= sc.next();
+                           System.out.print("Enter the charater whose index you want to get");
+                           String s1=sc.next();
+
+                             char c1=s1.charAt(0);
+                           System.out.println(s.indexOf(c1));
+                         break;
+                       }
+                      case 6:
+                       {
+                          System.out.println(" Enter the first String");
+                           String s1= br.readLine();
+                            System.out.println("Enter the second string");
+                           String s2=br.readLine();
+                         if(s1.equals(s2))
+                          System.out.println("Strings are equal");
+                        else
+                          System.out.println("Strings are not equals"); 
+                        break;
+                       }
+                   case 7:
+                       {
+                          System.out.println(" Enter the String");
+                           String s= br.readLine();
+                          System.out.println(s.length());
+                          break;
+                       }
+                      case 8:
+                       {
+                          System.out.println(" Enter the String");
+                           String s= br.readLine();
+                         System.out.println("Enter the index from & till where you  want to get substring");
+                          int a=sc.nextInt();
+                          int b=sc.nextInt();
+                          System.out.println(s.substring(a,b));
+                         break;
+                       }
+           
+                 }
+
+       }
+   }
+
+
+
+}
